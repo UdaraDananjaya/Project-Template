@@ -7,7 +7,9 @@ define('DBUSER', 'root');
 define('DBPASS', '');
 define('DBDRIVER', '');
 
-define('ROOT', 'http://localhost/Project-Template/public');
+define('BASE', 'http://localhost/Project-Template/');
+define('ROOT', BASE.'public/');
+
 
 define('APP_NAME', "My Webiste");
 define('APP_DESC', "Best website on the planet");
