@@ -1,13 +1,13 @@
 <?php
 
 /** database config **/
-define('DBNAME', 'my_db');
+define('DBNAME', 'sampledb');
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
 define('DBPASS', '');
 define('DBDRIVER', '');
 
-define('ROOT', 'https://www.yourwebsite.com');
+define('ROOT', 'http://localhost/Project-Template/public');
 
 define('APP_NAME', "My Webiste");
 define('APP_DESC', "Best website on the planet");
@@ -16,4 +16,4 @@ define('APP_DESC', "Best website on the planet");
 define('DEBUG', true);
 
 /** default controller **/
-define('DEFCON', 'web');
+define('DEFCON', 'Home');

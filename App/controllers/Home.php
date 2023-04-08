@@ -9,9 +9,10 @@ class Home
 
 	public function index()
 	{
-		$data = cust_log("ffff");
-		$this->view('home');
-		//$this->view('home',$data);
+
+		$data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
+		//$data['username']="udara";
+		$this->view('home',$data);
 	}
 
 }

@@ -2,7 +2,7 @@
 
 trait Controller
 {
-	public function view($name)
+	public function view($name, $data = [])
 	{
 		if (!empty($data))
 			extract($data);
