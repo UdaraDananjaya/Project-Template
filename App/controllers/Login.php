@@ -32,7 +32,10 @@ class Login
 			$data['errors'] = $user->errors;
 		}
 
-		$this->view('login',$data);
+		$this->view('index',$data);	
+		// $this->view('signup',$data);
+		// $this->view('admin/signup',$data);
+		//$this->view('login',$data);
 	}
 
 }

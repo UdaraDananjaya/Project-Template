@@ -18,4 +18,4 @@ define('APP_DESC', "Best website on the planet");
 define('DEBUG', true);
 
 /** default controller **/
-define('DEFCON', 'Home');
+define('DEFCON', 'Admin');
