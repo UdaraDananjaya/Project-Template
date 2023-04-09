@@ -105,4 +105,9 @@ trait Model
 		$this->query($query, $data);
 		return false;
 	}
+	
+	public function custom_query($query)
+	{
+		return $this->query($query);
+	}
 }

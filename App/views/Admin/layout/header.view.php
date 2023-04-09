@@ -39,16 +39,16 @@
 				<li class="nav-item dropdown pe-3">
 					<a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
 						<img src="<?= ROOT ?>assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-						<span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+						<span class="d-none d-md-block dropdown-toggle ps-2"><?=$User?></span>
 					</a><!-- End Profile Iamge Icon -->
 					<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-						<li class="dropdown-header">
-							<h6>Kevin Anderson</h6>
+						<!-- <li class="dropdown-header">
+							<h6><?=$User?></h6>
 							<span>Web Designer</span>
-						</li>
+						</li> 
 						<li>
 							<hr class="dropdown-divider">
-						</li>
+						</li>-->
 						<li>
 							<a class="dropdown-item d-flex align-items-center" href="#">
 								<i class="bi bi-box-arrow-right"></i>
@@ -70,19 +70,19 @@
 				</a>
 			</li><!-- End Dashboard Nav -->
 			<li class="nav-item">
-				<a class="nav-link <?= ($pagegroup != "Components") ? "collapsed" : ""; ?>" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+				<a class="nav-link <?= ($pagegroup != "UserManagement") ? "collapsed" : ""; ?>" data-bs-target="#usermanagement-nav" data-bs-toggle="collapse" href="#">
 					<i class="bi bi-menu-button-wide"></i>
-					<span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+					<span>User Management</span><i class="bi bi-chevron-down ms-auto"></i>
 				</a>
-				<ul id="components-nav" class="nav-content collapse <?= ($pagegroup == "Components") ? "show" : ""; ?>" data-bs-parent="#sidebar-nav">
+				<ul id="usermanagement-nav" class="nav-content collapse <?= ($pagegroup == "UserManagement") ? "show" : ""; ?>" data-bs-parent="#sidebar-nav">
 					<li>
-						<a href="components-alerts.html" class="<?=($page == "Alerts") ? "active" : ""; ?>">
-							<i class="bi bi-circle"></i><span>Alerts</span>
+						<a href="<?=ROOT?>Admin/listuser" class="<?=($page == "User List") ? "active" : ""; ?>">
+							<i class="bi bi-circle"></i><span>User List</span>
 						</a>
 					</li>
 					<li>
-						<a href="components-accordion.html">
-							<i class="bi bi-circle"></i><span>Accordion</span>
+						<a href="<?=ROOT?>Admin/manageuser"  class="<?=($page == "Manage User") ? "active" : ""; ?>">
+							<i class="bi bi-circle"></i><span>Manage User</span>
 						</a>
 					</li>
 

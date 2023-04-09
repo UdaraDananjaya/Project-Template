@@ -9,16 +9,48 @@ class Admin
 
 	public function index()
 	{
-		if (empty($_SESSION['USER'])){redirect('Admin/login');}
-		//$data['username'] = empty($_SESSION['USER']) ? 'User':$_SESSION['USER']->email;
-		$data['page']="Dashboard";
-		$data['pagegroup']="";
-		// $data['page']="Alerts";
-		// $data['pagegroup']="Components";
-		//$this->view('layout/header',$data);
-		//$this->view('index',$data);
+		if (empty($_SESSION['USER'])){redirect('Admin/login');}// Check Is the user Login
+		$user = new Admin_model; // Load Model
+		$user->set_table('users'); // Set Model Table
+		$data['page']="Dashboard"; // Page URL
+		$data['pagegroup']=""; // Page Sub Group Customer -> Manage Customer
+		$data['User'] = $_SESSION['USER']->email; // Login User Name
+		$row = $user->custom_query("SELECT COUNT('product_id') as COUNT FROM `users`");
+		$row2 = $user->custom_query("SELECT COUNT('product_id') as COUNT FROM `users`");
+		$row3 = $user->custom_query("SELECT COUNT('product_id') as COUNT FROM `users`");
+		$data['Dashboard']= array("Customers"=>"{$row[0]->COUNT}", "Products"=>"{$row2[0]->COUNT}", "Orders"=>"{$row3[0]->COUNT}");
+		$row = $user->findAll();
+		$data['Dashboard_table'] =$row;
 		$this->view('Admin/index',$data);
-		//$this->view('index',$data);
+
+	}
+	public function listuser()
+	{
+		if (empty($_SESSION['USER'])){redirect('Admin/login');}// Check Is the user Login
+		$user = new Admin_model; // Load Model
+		$user->set_table('users'); // Set Model Table
+		$data['page']="User List"; // Page URL
+		$data['pagegroup']="UserManagement"; // Page Sub Group Customer -> Manage Customer
+		$data['User'] = $_SESSION['USER']->email; // Login User Name
+		$row = $user->findAll();
+		$data['Dashboard_table'] =$row;
+		$this->view('Admin/listuser',$data);
+
+	}public function manageuser()
+	{
+		if (empty($_SESSION['USER'])){redirect('Admin/login');}// Check Is the user Login
+		$user = new Admin_model; // Load Model
+		$user->set_table('users'); // Set Model Table
+		$data['page']="Manage User"; // Page URL
+		$data['pagegroup']="UserManagement"; // Page Sub Group Customer -> Manage Customer
+		$data['User'] = $_SESSION['USER']->email; // Login User Name
+		$row = $user->custom_query("SELECT COUNT('product_id') as COUNT FROM `users`");
+		$row2 = $user->custom_query("SELECT COUNT('product_id') as COUNT FROM `users`");
+		$row3 = $user->custom_query("SELECT COUNT('product_id') as COUNT FROM `users`");
+		$data['Dashboard']= array("Customers"=>"{$row[0]->COUNT}", "Products"=>"{$row2[0]->COUNT}", "Orders"=>"{$row3[0]->COUNT}");
+		$row = $user->findAll();
+		$data['Dashboard_table'] =$row;
+		$this->view('Admin/manageuser',$data);
 	}
 	public function login()
 	{
@@ -43,5 +75,9 @@ class Admin
 		}
 		$this->view('login',$data);
 	}
-
+	public function logout()
+	{
+		if(!empty($_SESSION['USER']))unset($_SESSION['USER']);
+		if (empty($_SESSION['USER'])){redirect('Admin/login');}
+	}
 }
