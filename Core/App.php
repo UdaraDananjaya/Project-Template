@@ -1,4 +1,7 @@
 <?php
+/**
+ * Main Application
+ */
 class App
 {
 	private $controller = DEFCON;

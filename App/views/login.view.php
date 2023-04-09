@@ -78,7 +78,7 @@
 										<div class="col-12">
 											<div class="form-check" style="padding:0px">
 												<div class="errmsg">
-													<?= (!(empty($errors))) ? "<label>". implode("<br>", $errors) ."</label>" : ""; ?>
+													<?= (!(empty($errors))) ? "<label>" . implode("<br>", $errors) . "</label>" : ""; ?>
 
 												</div>
 											</div>

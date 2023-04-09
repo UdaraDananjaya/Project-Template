@@ -1,7 +1,9 @@
 <?php
-
 /**
  * Main Model trait
+ * This Model Use Database 
+ * Also We need declare table name as object
+ * default $order_type changed to desc
  */
 trait Model
 {
@@ -9,7 +11,7 @@ trait Model
 
 	protected $limit 		= 10;
 	protected $offset 		= 0;
-	protected $order_type 	= "desc";
+	protected $order_type 	= "asc";
 	protected $order_column = "id";
 	public $errors 		= [];
 

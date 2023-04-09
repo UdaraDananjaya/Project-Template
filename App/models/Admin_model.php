@@ -1,8 +1,6 @@
 <?php 
-
-
 /**
- * User class
+ * Admin model class
  */
 class Admin_model
 {

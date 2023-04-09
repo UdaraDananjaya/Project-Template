@@ -12,9 +12,7 @@
 	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 	<!-- Google Fonts -->
 	<link href="https://fonts.gstatic.com" rel="preconnect">
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 	<!-- Vendor CSS Files -->
 	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -73,8 +71,7 @@
 			</li><!-- End Dashboard Nav -->
 			<li class="nav-item">
 				<a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-menu-button-wide"></i><span>Components</span><i
-						class="bi bi-chevron-down ms-auto"></i>
+					<i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
 				</a>
 				<ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 					<li>
@@ -178,8 +175,7 @@
 			</li><!-- End Forms Nav -->
 			<li class="nav-item">
 				<a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
-						class="bi bi-chevron-down ms-auto"></i>
+					<i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
 				</a>
 				<ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 					<li>
@@ -309,8 +305,7 @@
 			Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 		</div>
 	</footer><!-- End Footer -->
-	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-			class="bi bi-arrow-up-short"></i></a>
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 	<!-- Vendor JS Files -->
 	<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

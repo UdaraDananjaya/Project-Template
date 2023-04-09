@@ -1,4 +1,7 @@
 <?php
+/**
+ * Database Class
+ */
 trait Database
 {
 	private function connect()

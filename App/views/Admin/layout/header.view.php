@@ -39,11 +39,11 @@
 				<li class="nav-item dropdown pe-3">
 					<a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
 						<img src="<?= ROOT ?>assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-						<span class="d-none d-md-block dropdown-toggle ps-2"><?=$User?></span>
+						<span class="d-none d-md-block dropdown-toggle ps-2"><?= $User ?></span>
 					</a><!-- End Profile Iamge Icon -->
 					<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
 						<!-- <li class="dropdown-header">
-							<h6><?=$User?></h6>
+							<h6><?= $User ?></h6>
 							<span>Web Designer</span>
 						</li> 
 						<li>
@@ -64,7 +64,7 @@
 	<aside id="sidebar" class="sidebar">
 		<ul class="sidebar-nav" id="sidebar-nav">
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?=ROOT?>Admin/index">
+				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?= ROOT ?>Admin/index">
 					<i class="bi bi-grid"></i>
 					<span>Dashboard</span>
 				</a>
@@ -76,16 +76,15 @@
 				</a>
 				<ul id="usermanagement-nav" class="nav-content collapse <?= ($pagegroup == "UserManagement") ? "show" : ""; ?>" data-bs-parent="#sidebar-nav">
 					<li>
-						<a href="<?=ROOT?>Admin/listuser" class="<?=($page == "User List") ? "active" : ""; ?>">
+						<a href="<?= ROOT ?>Admin/listuser" class="<?= ($page == "User List") ? "active" : ""; ?>">
 							<i class="bi bi-circle"></i><span>User List</span>
 						</a>
 					</li>
 					<li>
-						<a href="<?=ROOT?>Admin/manageuser"  class="<?=($page == "Manage User") ? "active" : ""; ?>">
+						<a href="<?= ROOT ?>Admin/manageuser" class="<?= ($page == "Manage User") ? "active" : ""; ?>">
 							<i class="bi bi-circle"></i><span>Manage User</span>
 						</a>
 					</li>
-
 				</ul>
 			</li><!-- End Components Nav -->
 			<li class="nav-heading">Pages</li>
@@ -96,7 +95,7 @@
 				</a>
 			</li><!-- End Profile Page Nav -->
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?=ROOT?>Admin/login">
+				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?= ROOT ?>Admin/login">
 					<i class="bi bi-box-arrow-in-right"></i>
 					<span>Login</span>
 				</a>
