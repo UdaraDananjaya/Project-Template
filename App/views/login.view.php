@@ -10,20 +10,20 @@
 	<meta content="" name="keywords">
 
 	<!-- Favicons -->
-	<link href="<?=ROOT?>assets/img/favicon.png" rel="icon">
-	<link href="<?=ROOT?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="<?= ROOT ?>assets/img/favicon.png" rel="icon">
+	<link href="<?= ROOT ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 	<!-- Google Fonts -->
 	<link href="https://fonts.gstatic.com" rel="preconnect">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 	<!-- Vendor CSS Files -->
-	<link href="<?=BASE?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="<?=BASE?>vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="<?=BASE?>vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link href="<?=BASE?>vendor/quill/quill.snow.css" rel="stylesheet">
-	<link href="<?=BASE?>vendor/quill/quill.bubble.css" rel="stylesheet">
-	<link href="<?=BASE?>vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="<?= BASE ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= BASE ?>vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="<?= BASE ?>vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="<?= BASE ?>vendor/quill/quill.snow.css" rel="stylesheet">
+	<link href="<?= BASE ?>vendor/quill/quill.bubble.css" rel="stylesheet">
+	<link href="<?= BASE ?>vendor/remixicon/remixicon.css" rel="stylesheet">
 	<!-- Template Main CSS File -->
-	<link href="<?=ROOT?>assets/css/style.css" rel="stylesheet">
+	<link href="<?= ROOT ?>assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
 
 							<div class="d-flex justify-content-center py-4">
 								<a href="index.html" class="logo d-flex align-items-center w-auto">
-									<img src="<?=ROOT?>assets/img/logo.png" alt="">
+									<img src="<?= ROOT ?>assets/img/logo.png" alt="">
 									<span class="d-none d-lg-block">NiceAdmin</span>
 								</a>
 							</div><!-- End Logo -->
@@ -52,7 +52,7 @@
 										<p class="text-center small">Enter your username & password to login</p>
 									</div>
 
-									<form class="row g-3 needs-validation" novalidate>
+									<form class="row g-3 needs-validation" method="POST" novalidate>
 
 										<div class="col-12">
 											<label for="yourUsername" class="form-label">Username</label>
@@ -78,7 +78,8 @@
 										<div class="col-12">
 											<div class="form-check" style="padding:0px">
 												<div class="errmsg">
-													<label>Remember me</label>
+													<?= (!(empty($errors))) ? "<label>". implode("<br>", $errors) ."</label>" : ""; ?>
+
 												</div>
 											</div>
 
@@ -110,13 +111,13 @@
 	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 	<!-- Vendor JS Files -->
-	<script src="<?=BASE?>vendor/apexcharts/apexcharts.min.js"></script>
-	<script src="<?=BASE?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="<?=BASE?>vendor/chart.js/chart.umd.js"></script>
-	<script src="<?=BASE?>vendor/echarts/echarts.min.js"></script>
-	<script src="<?=BASE?>vendor/quill/quill.min.js"></script>
+	<script src="<?= BASE ?>vendor/apexcharts/apexcharts.min.js"></script>
+	<script src="<?= BASE ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<?= BASE ?>vendor/chart.js/chart.umd.js"></script>
+	<script src="<?= BASE ?>vendor/echarts/echarts.min.js"></script>
+	<script src="<?= BASE ?>vendor/quill/quill.min.js"></script>
 	<!-- Template Main JS File -->
-	<script src="<?=ROOT?>assets/js/main.js"></script>
+	<script src="<?= ROOT ?>assets/js/main.js"></script>
 
 </body>
 

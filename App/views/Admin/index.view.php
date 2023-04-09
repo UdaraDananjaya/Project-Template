@@ -1,3 +1,4 @@
+<?php require_once('layout/header.view.php'); ?>
 
   <main id="main" class="main">
 
@@ -13,7 +14,8 @@
 
     <section class="section dashboard">
       <div class="row">
+    
       </div>
     </section>
   </main><!-- End #main -->
-  
+  <?php require_once('layout/footer.view.php'); ?>

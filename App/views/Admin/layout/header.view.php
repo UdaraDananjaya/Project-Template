@@ -64,7 +64,7 @@
 	<aside id="sidebar" class="sidebar">
 		<ul class="sidebar-nav" id="sidebar-nav">
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="index.html">
+				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?=ROOT?>Admin/index">
 					<i class="bi bi-grid"></i>
 					<span>Dashboard</span>
 				</a>
@@ -96,7 +96,7 @@
 				</a>
 			</li><!-- End Profile Page Nav -->
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="pages-login.html">
+				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?=ROOT?>Admin/login">
 					<i class="bi bi-box-arrow-in-right"></i>
 					<span>Login</span>
 				</a>
