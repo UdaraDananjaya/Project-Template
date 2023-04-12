@@ -3,6 +3,33 @@
 /**
  * Common Function List
  */
+
+function system_dump($s, $e)
+{
+	echo "<hr>";
+
+	$sys_usage = getrusage();
+	printf("Page Rendering : <strong> %.2f s</strong>. ", ($e - $s));
+	printf("Memory Useage  : <strong> %.2u KB</strong>. ", round(memory_get_usage() / 1024));
+	printf("System Time Useage  : <strong> %.2f s</strong>. ", ($sys_usage["ru_stime.tv_sec"] / 1000000));
+	printf("User Time Useage  : <strong> %.2f s</strong>. ", ($sys_usage["ru_utime.tv_sec"] / 1000000));
+
+	echo "<hr>";
+}
+
+function variable_dump($variable) {
+	echo "<hr>";
+    foreach ($variable as $argname => $arg) {
+        $type = gettype($arg);
+        $value = var_export($arg, true);
+		$name = $argname;
+		if ($name == '_SERVER' ){continue;};
+		echo "($type) <strong> $name </strong> => $value <br>";
+    }
+	echo "<hr>";
+}
+
+
 function show($stuff)
 {
 	echo "<pre>";
@@ -73,11 +100,3 @@ function decrypt_password($encrypted_password, $salt)
 	return $password;
 }
 
-
-function rm(){
-	echo $ram_usage = memory_get_usage();
-	$load_averages = sys_getloadavg();
-
-	echo "Current CPU usage: " . implode(', ', $load_averages);
-
-}

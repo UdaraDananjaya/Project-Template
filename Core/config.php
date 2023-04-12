@@ -1,5 +1,8 @@
 <?php
 
+define('SYSTEM_DUMP', true); // Database name
+define('VARIABLE_DUMP', true); // Database name
+
 // Database configuration
 define('DBNAME', 'sampledb'); // Database name
 define('DBHOST', 'localhost'); // Database server hostname
@@ -24,3 +27,4 @@ define('DEBUG', true); // Enable debug mode (true/false)
 
 // Routes configuration
 define('DEFCON', 'Admin'); // Default Controller
+define('STARTX2', microtime(true)); // Database password
