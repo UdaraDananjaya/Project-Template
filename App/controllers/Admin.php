@@ -19,6 +19,7 @@ class Admin
 		$row = $user->findAll();
 		$data['Dashboard_table'] = $row;
 		$this->view('Admin/index', $data);
+		variable_dump(get_defined_vars());
 	}
 	public function listuser()
 	{

@@ -1,7 +1,7 @@
 <?php
 
-define('SYSTEM_DUMP', true); // Database name
-define('VARIABLE_DUMP', true); // Database name
+define('SYSTEM_DUMP', false); // Database name
+define('VARIABLE_DUMP', false); // Database name
 
 // Database configuration
 define('DBNAME', 'sampledb'); // Database name
