@@ -6,7 +6,7 @@ trait Database
 {
 	private function connect()
 	{
-		$string = "mysql:hostname=" . CONFIG['db']['hostname'] . ";dbname=" . CONFIG['db']['database'];
+		$string = CONFIG['db']['dbdriver'].":hostname=" . CONFIG['db']['hostname'] . ";dbname=" . CONFIG['db']['database'];
 		$con = new PDO($string, CONFIG['db']['username'],  CONFIG['db']['password']);
 		return $con;
 	}

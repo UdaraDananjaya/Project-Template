@@ -4,9 +4,8 @@
  */
 class App
 {
-
 	private $controller = CONFIG['defcon'];
-	private $method 	= CONFIG['defmet'];
+	private $method	= CONFIG['defmet'];
 	private function splitURL()
 	{
 		$URL = $_GET['url'] ?? CONFIG['defcon'];

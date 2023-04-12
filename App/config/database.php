@@ -4,5 +4,5 @@ $config['db'] = array(
 	'username' => 'root',
 	'password' => '',
 	'database' => 'sampledb',
-	'dbdriver' => 'mysqli'
+	'dbdriver' => 'mysql'
 );
