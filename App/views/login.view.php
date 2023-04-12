@@ -5,13 +5,13 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>Login - <?= APP_NAME ?></title>
+	<title>Login - <?= CONFIG['app_name'] ?></title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
 	<!-- Favicons -->
-	<link href="<?= ROOT ?>assets/img/favicon.png" rel="icon">
-	<link href="<?= ROOT ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="<?= BASE ?>assets/img/favicon.png" rel="icon">
+	<link href="<?= BASE ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 	<!-- Google Fonts -->
 	<link href="https://fonts.gstatic.com" rel="preconnect">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -23,7 +23,7 @@
 	<link href="<?= BASE ?>assets/vendor/quill/quill.bubble.css" rel="stylesheet">
 	<link href="<?= BASE ?>assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 	<!-- Template Main CSS File -->
-	<link href="<?= ROOT ?>assets/css/style.css" rel="stylesheet">
+	<link href="<?= BASE ?>assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
 
 							<div class="d-flex justify-content-center py-4">
 								<a href="index.html" class="logo d-flex align-items-center w-auto">
-									<img src="<?= ROOT ?>assets/img/logo.png" alt="">
+									<img src="<?= BASE ?>assets/img/logo.png" alt="">
 									<span class="d-none d-lg-block">NiceAdmin</span>
 								</a>
 							</div><!-- End Logo -->
@@ -117,7 +117,7 @@
 	<script src="<?= BASE ?>assets/vendor/echarts/echarts.min.js"></script>
 	<script src="<?= BASE ?>assets/vendor/quill/quill.min.js"></script>
 	<!-- Template Main JS File -->
-	<script src="<?= ROOT ?>assets/js/main.js"></script>
+	<script src="<?= BASE ?>assets/js/main.js"></script>
 
 </body>
 

@@ -6,8 +6,8 @@ trait Database
 {
 	private function connect()
 	{
-		$string = "mysql:hostname=" . DBHOST . ";dbname=" . DBNAME;
-		$con = new PDO($string, DBUSER, DBPASS);
+		$string = "mysql:hostname=" . CONFIG['db']['hostname'] . ";dbname=" . CONFIG['db']['database'];
+		$con = new PDO($string, CONFIG['db']['username'],  CONFIG['db']['password']);
 		return $con;
 	}
 	public function query($query, $data = [])

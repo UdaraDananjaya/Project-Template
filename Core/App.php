@@ -4,11 +4,12 @@
  */
 class App
 {
-	private $controller = DEFCON;
-	private $method 	= 'index';
+
+	private $controller = CONFIG['defcon'];
+	private $method 	= CONFIG['defmet'];
 	private function splitURL()
 	{
-		$URL = $_GET['url'] ?? DEFCON;
+		$URL = $_GET['url'] ?? CONFIG['defcon'];
 		$URL = explode("/", trim($URL, "/"));
 		return $URL;
 	}

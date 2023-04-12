@@ -49,7 +49,7 @@
 										echo "<td>{$value->email}</td>";
 										echo "<td>{$value->password}</td>";
 										echo "<td>{$value->date}</td>";
-										echo "<td><a href='" . ROOT . "Admin/manageuser?id={$value->id}'>ss</a></td>";
+										echo "<td><a href='" . BASE . "Admin/manageuser?id={$value->id}'>ss</a></td>";
 										echo "</tr>";
 									}
 									?>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SimpleX PHP Framework
  * @package SimpleXPHP
@@ -8,7 +9,7 @@
  */
 
 //Page Rendering
-$config['Render_Start']= microtime(true);
+$config['Render_Start'] = microtime(true);
 
 //Start Session
 session_start();
@@ -17,13 +18,16 @@ session_start();
 require "Core/init.php";
 
 //Error Reporting 
-DEBUG ? ini_set('display_errors', 1) : ini_set('display_errors', 0);
+CONFIG['debug'] ? ini_set('display_errors', 1) : ini_set('display_errors', 0);
 
 //Create App Object And Load loadController()
 $app = new App;
 $app->loadController();
 
-if (SYSTEM_DUMP) {system_dump($config['Render_Start'],microtime(true));} 
-if (VARIABLE_DUMP) {variable_dump(get_defined_vars());} 
-
-//var_dump(get_defined_vars());
+//System And Variable Dumps
+if (CONFIG['variable_dump']) {
+    variable_dump(get_defined_vars());
+}
+if (CONFIG['system_dump']) {
+    system_dump($config['Render_Start'], microtime(true));
+}

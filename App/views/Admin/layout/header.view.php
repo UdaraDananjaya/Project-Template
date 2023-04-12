@@ -4,12 +4,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title><?= $page ?> - <?= APP_NAME ?></title>
+	<title><?= $page ?> - <?= CONFIG['app_name'] ?></title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 	<!-- Favicons -->
-	<link href="<?= ROOT ?>assets/img/favicon.png" rel="icon">
-	<link href="<?= ROOT ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="<?= BASE ?>assets/img/favicon.png" rel="icon">
+	<link href="<?= BASE ?>assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 	<!-- Google Fonts -->
 	<link href="https://fonts.gstatic.com" rel="preconnect">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -21,7 +21,7 @@
 	<link href="<?= BASE ?>assets/vendor/quill/quill.bubble.css" rel="stylesheet">
 	<link href="<?= BASE ?>assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 	<!-- Template Main CSS File -->
-	<link href="<?= ROOT ?>assets/css/style.css" rel="stylesheet">
+	<link href="<?= BASE ?>assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 	<header id="header" class="header fixed-top d-flex align-items-center">
 		<div class="d-flex align-items-center justify-content-between">
 			<a href="index.html" class="logo d-flex align-items-center">
-				<img src="<?= ROOT ?>assets/img/logo.png" alt="">
+				<img src="<?= BASE ?>assets/img/logo.png" alt="">
 				<span class="d-none d-lg-block">NiceAdmin</span>
 			</a>
 			<i class="bi bi-list toggle-sidebar-btn"></i>
@@ -38,7 +38,7 @@
 			<ul class="d-flex align-items-center">
 				<li class="nav-item dropdown pe-3">
 					<a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-						<img src="<?= ROOT ?>assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+						<img src="<?= BASE ?>assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
 						<span class="d-none d-md-block dropdown-toggle ps-2"><?= $User ?></span>
 					</a><!-- End Profile Iamge Icon -->
 					<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -64,7 +64,7 @@
 	<aside id="sidebar" class="sidebar">
 		<ul class="sidebar-nav" id="sidebar-nav">
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?= ROOT ?>Admin/index">
+				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?= BASE ?>Admin/index">
 					<i class="bi bi-grid"></i>
 					<span>Dashboard</span>
 				</a>
@@ -76,12 +76,12 @@
 				</a>
 				<ul id="usermanagement-nav" class="nav-content collapse <?= ($pagegroup == "UserManagement") ? "show" : ""; ?>" data-bs-parent="#sidebar-nav">
 					<li>
-						<a href="<?= ROOT ?>Admin/listuser" class="<?= ($page == "User List") ? "active" : ""; ?>">
+						<a href="<?= BASE ?>Admin/listuser" class="<?= ($page == "User List") ? "active" : ""; ?>">
 							<i class="bi bi-circle"></i><span>User List</span>
 						</a>
 					</li>
 					<li>
-						<a href="<?= ROOT ?>Admin/manageuser" class="<?= ($page == "Manage User") ? "active" : ""; ?>">
+						<a href="<?= BASE ?>Admin/manageuser" class="<?= ($page == "Manage User") ? "active" : ""; ?>">
 							<i class="bi bi-circle"></i><span>Manage User</span>
 						</a>
 					</li>
@@ -95,7 +95,7 @@
 				</a>
 			</li><!-- End Profile Page Nav -->
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?= ROOT ?>Admin/login">
+				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?= BASE ?>Admin/login">
 					<i class="bi bi-box-arrow-in-right"></i>
 					<span>Login</span>
 				</a>
