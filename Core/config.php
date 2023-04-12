@@ -8,7 +8,7 @@ define('DBPASS', ''); // Database password
 
 // Site configuration
 define('BASE', 'http://localhost/Project-Template/'); // Base URL for the site
-define('ROOT', BASE . 'public/'); // Root URL for the site
+define('ROOT', BASE . ''); // Root URL for the site
 define('APP_NAME', "My Webiste"); // Site name
 define('APP_DESC', "Best website on the planet"); // Site name
 
