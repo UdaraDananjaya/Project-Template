@@ -12,7 +12,7 @@
  */
 
 spl_autoload_register(function ($classname) {
-	require $filename = "../App/models/" . ucfirst($classname) . ".php";
+	require $filename = "App/models/" . ucfirst($classname) . ".php";
 });
 
 require 'config.php';

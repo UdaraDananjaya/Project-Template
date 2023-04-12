@@ -72,3 +72,12 @@ function decrypt_password($encrypted_password, $salt)
 	}
 	return $password;
 }
+
+
+function rm(){
+	echo $ram_usage = memory_get_usage();
+	$load_averages = sys_getloadavg();
+
+	echo "Current CPU usage: " . implode(', ', $load_averages);
+
+}

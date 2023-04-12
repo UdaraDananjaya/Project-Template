@@ -16,14 +16,14 @@ class App
 	{
 		$URL = $this->splitURL();
 		/** select controller **/
-		$filename = "../App/controllers/" . ucfirst($URL[0]) . ".php";
+		$filename = "App/controllers/" . ucfirst($URL[0]) . ".php";
 		if (file_exists($filename)) {
 			require $filename;
 			$this->controller = ucfirst($URL[0]);
 			unset($URL[0]);
 		} else {
 
-			$filename = "../App/controllers/_404.php";
+			$filename = "App/controllers/_404.php";
 			require $filename;
 			$this->controller = "_404";
 		}
