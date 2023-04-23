@@ -9,7 +9,7 @@
  */
 
 //Page Rendering
-$config['Render_Start'] = microtime(true);
+$Render_Start = microtime(true);
 
 //Start Session
 session_start();
@@ -17,7 +17,7 @@ session_start();
 //Framework Initialization
 require "Core/init.php";
 
-//Error Reporting 
+//Error Reporting
 CONFIG['debug'] ? ini_set('display_errors', 1) : ini_set('display_errors', 0);
 
 //Create App Object And Load loadController()
@@ -29,5 +29,5 @@ if (CONFIG['variable_dump']) {
     variable_dump(get_defined_vars());
 }
 if (CONFIG['system_dump']) {
-    system_dump($config['Render_Start'], microtime(true));
+    system_dump($Render_Start, microtime(true));
 }

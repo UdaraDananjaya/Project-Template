@@ -2,8 +2,7 @@
 /**
  * Main Model trait
  * This Model Use Database 
- * Also We need declare table name as object
- * default $order_type changed to desc
+ * Also We need declare Table Name as Object
  */
 trait Model
 {
@@ -55,7 +54,6 @@ trait Model
 
 	public function insert($data)
 	{
-		/** remove unwanted data **/
 		if (!empty($this->allowedColumns)) {
 			foreach ($data as $key => $value) {
 
@@ -72,7 +70,6 @@ trait Model
 
 	public function update($id, $data, $id_column = 'id')
 	{
-		/** remove unwanted data **/
 		if (!empty($this->allowedColumns)) {
 			foreach ($data as $key => $value) {
 
@@ -95,7 +92,6 @@ trait Model
 
 	public function delete($id, $id_column = 'id')
 	{
-
 		$data[$id_column] = $id;
 		$query = "delete from $this->table where $id_column = :$id_column ";
 		$this->query($query, $data);

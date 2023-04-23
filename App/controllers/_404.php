@@ -6,6 +6,7 @@ class _404
 	
 	public function index()
 	{
-		echo "404 Page not found controller";
+		$data['data']=true;
+		$this->view('404', $data);
 	}
 }

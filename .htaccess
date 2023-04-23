@@ -1,8 +1,8 @@
 RewriteEngine On
 
-#accept loading of actual files and directories
+#Accept Loading Of Actual Files(-f) And Directories(-d)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-#send everything else to the index page
+#Send Everything Else To The Index Page
 RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
