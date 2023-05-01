@@ -65,7 +65,7 @@
 	<aside id="sidebar" class="sidebar">
 		<ul class="sidebar-nav" id="sidebar-nav">
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?= BASE ?>Admin/index">
+				<a class="nav-link <?= ($page == "Dashboard") ? "" : "collapsed"; ?>" href="<?= BASE ?>Sample/index">
 					<i class="bi bi-grid"></i>
 					<span>Dashboard</span>
 				</a>
@@ -77,12 +77,12 @@
 				</a>
 				<ul id="usermanagement-nav" class="nav-content collapse <?= ($pagegroup == "UserManagement") ? "show" : ""; ?>" data-bs-parent="#sidebar-nav">
 					<li>
-						<a href="<?= BASE ?>Admin/listuser" class="<?= ($page == "User List") ? "active" : ""; ?>">
+						<a href="<?= BASE ?>Sample/listuser" class="<?= ($page == "User List") ? "active" : ""; ?>">
 							<i class="bi bi-circle"></i><span>User List</span>
 						</a>
 					</li>
 					<li>
-						<a href="<?= BASE ?>Admin/manageuser" class="<?= ($page == "Manage User") ? "active" : ""; ?>">
+						<a href="<?= BASE ?>Sample/manageuser" class="<?= ($page == "Manage User") ? "active" : ""; ?>">
 							<i class="bi bi-circle"></i><span>Manage User</span>
 						</a>
 					</li>
@@ -96,7 +96,7 @@
 				</a>
 			</li><!-- End Profile Page Nav -->
 			<li class="nav-item">
-				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?= BASE ?>Admin/login">
+				<a class="nav-link <?= ($page == "Login") ? "" : "collapsed"; ?>" href="<?= BASE ?>Sample/login">
 					<i class="bi bi-box-arrow-in-right"></i>
 					<span>Login</span>
 				</a>
