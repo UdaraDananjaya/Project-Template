@@ -16,7 +16,7 @@
 	<section class="section dashboard">
 		<div class="row">
 			<div class="col-xxl-4 col-md-4">
-				<div class="card info-card sales-card">
+				<div class="card info-card card-type-a">
 					<div class="card-body">
 						<h5 class="card-title">Customers <span>| Today</span></h5>
 						<div class="d-flex align-items-center">
@@ -32,7 +32,7 @@
 			</div>
 
 			<div class="col-xxl-4 col-md-4">
-				<div class="card info-card revenue-card">
+				<div class="card info-card card-type-b">
 					<div class="card-body">
 						<h5 class="card-title">Products <span>| Today</span></h5>
 						<div class="d-flex align-items-center">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<div class="col-xxl-4 col-md-4">
-				<div class="card info-card revenue-card">
+				<div class="card info-card card-type-c">
 					<div class="card-body">
 						<h5 class="card-title">Orders <span>| Today</span></h5>
 						<div class="d-flex align-items-center">
